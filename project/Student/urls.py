@@ -37,4 +37,5 @@ urlpatterns=[
 	path('expirytab/',views.expirytab,name="expt"),
 	path('details/',views.details,name="details"),
 	path('meddtls/<int:id>/',views.medidetails,name="medidetails"),
+	
 ]

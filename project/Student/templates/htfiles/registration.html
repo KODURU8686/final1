@@ -3,128 +3,95 @@
 {% block content %}
 
 
-<style type="text/css">
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-body {
-  background: #fbf3ff;
-} 
-.container {
-  position: absolute;
-  max-width: 800px;
-  height: 500px;
-  margin: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} 
-.myRightCtn {
-  position: relative;
-  background-image: linear-gradient(45deg, #f046ff, #9b00e8);
-  border-radius: 25px;
-  height: 100%;
-  padding: 25px;
-  color: rgb(192, 192, 192);
-  font-size: 12px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.myLeftCtn {
-  position: relative;
-  background: #fff;
-  border-radius: 25px;
-  height: 100%;
-  padding: 25px;
-  padding-left: 50px;
-}
-.myLeftCtn header {
-  color: blueviolet;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.row{
-height: 100%;
-} 
-.myCard {
-  position: relative;
-  background: #fff;
-  height: 100%;
-  border-radius: 25px;
-  -webkit-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
-  box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
-} 
-.myRightCtn header {
-  color: #fff;
-  font-size: 44px;
-}
-.box {
-  position: relative;
-  margin: 20px;
-  margin-bottom: 100px;
-} 
-.myLeftCtn .myInput {
-  width: 230px;
-  border-radius: 25px;
-  padding: 10px;
-  padding-left: 50px;
-  border: none;
-  -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
-  box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
-}
-.myLeftCtn .myInput:focus {
-  outline: none;
-} 
-.myForm {
-  position: relative;
-  margin-top: 50px;
-} 
-.myLeftCtn .butt {
-  background: linear-gradient(45deg, #bb36fd, #9b00e8);
-  color: #fff;
-  width: 230px;
-  border: none;
-  border-radius: 25px;
-  padding: 10px;
-  -webkit-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
-  box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
-} 
-.myLeftCtn .butt:hover {
-  background: linear-gradient(45deg, #c85bff, #b726ff);
-}
-.myLeftCtn .butt:focus {
-  outline: none;
-} 
-.myLeftCtn .fas {
-  position: relative;
-  color: #bb36fd;
-  left: 36px;
-} 
-.butt_out {
-  background: transparent;
-  color: #fff;
-  width: 120px;
-  border: 2px solid#fff;
-  border-radius: 25px;
-  padding: 10px;
-  -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
-  box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
-} 
-.butt_out:hover {
-  border: 2px solid#eecbff;
-} 
-.butt_out:focus {
-  outline: none;
-}
-
+<style>
+    body {
+        color: #fff;
+        background: #19aa8d;
+        font-family: 'Roboto', sans-serif;
+    }
+    .form-control, .form-control:focus, .input-group-addon {
+        border-color: #e1e1e1;
+    }
+    .form-control, .btn {        
+        border-radius: 3px;
+    }
+    .signup-form {
+        width: 390px;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+    .signup-form form {
+        color: #999;
+        border-radius: 3px;
+        margin-bottom: 15px;
+        background: #fff;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+    .signup-form h2 {
+        color: #333;
+        font-weight: bold;
+        margin-top: 0;
+    }
+    .signup-form hr {
+        margin: 0 -30px 20px;
+    }
+    .signup-form .form-group {
+        margin-bottom: 20px;
+    }
+    .signup-form label {
+        font-weight: normal;
+        font-size: 13px;
+    }
+    .signup-form .form-control {
+        min-height: 38px;
+        box-shadow: none !important;
+    }   
+    .signup-form .input-group-addon {
+        max-width: 42px;
+        text-align: center;
+    }
+    .signup-form input[type="checkbox"] {
+        margin-top: 2px;
+    }   
+    .signup-form .btn{        
+        font-size: 16px;
+        font-weight: bold;
+        background: #19aa8d;
+        border: none;
+        min-width: 140px;
+    }
+    .signup-form .btn:hover, .signup-form .btn:focus {
+        background: #179b81;
+        outline: none;
+    }
+    .signup-form a {
+        color: #fff;    
+        text-decoration: underline;
+    }
+    .signup-form a:hover {
+        text-decoration: none;
+    }
+    .signup-form form a {
+        color: #19aa8d;
+        text-decoration: none;
+    }   
+    .signup-form form a:hover {
+        text-decoration: underline;
+    }
+    .signup-form .fa {
+        font-size: 21px;
+    }
+    .signup-form .fa-paper-plane {
+        font-size: 18px;
+    }
+    .signup-form .fa-check {
+        color: #fff;
+        left: 17px;
+        top: 18px;
+        font-size: 7px;
+        position: absolute;
+    }
 </style>
 <!-- <!DOCTYPE html>
 <html>
@@ -140,58 +107,46 @@ height: 100%;
         <div class="myCard">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="myLeftCtn"> 
-                        <form class="myForm text-center">
-                            <header>Create new account</header>
-                            <div class="form-group">
-                                <i class="fas fa-user"></i>
-                                <input class="myInput" type="text" placeholder="Username" id="username" required> 
-                            </div>
-
-                            <div class="form-group">
-                                <i class="fas fa-envelope"></i>
-                                <input class="myInput" placeholder="Email" type="text" id="email" required> 
-                            </div>
-
-                            <div class="form-group">
-                                <i class="fas fa-lock"></i>
-                                <input class="myInput" type="password" id="password" placeholder="Password" required> 
-                            </div>
-
-                             <div class="form-group">
-                                <i class="fas fa-lock"></i>
-                                <input class="myInput" type="password" id="password" placeholder="Confrim Password" required> 
-                            </div>
-
-                            <div class="form-group">
-                                <label>
-                                    <input id="check_1" name="check_1"  type="checkbox" required><small> I read and agree to Terms & Conditions</small></input> 
-                                    <div class="invalid-feedback">You must check the box.</div>
-                                </label>
-                            </div>
-
-                            <input type="submit" class="butt" value="CREATE ACCOUNT">
-                             <div class="form-group">
-                                  <i class="fas fa-lock"></i>
-                                  <span class="">Don't have an account? </span><a href="{% url 'nreg' %}">Register</a>
-                              </div>
-                        </form>
-                    </div>
-                </div> 
-                <div class="col-md-6">
-                    <div class="myRightCtn">
-                            <div class="box"><header>Hello World!</header>
-                            
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore magna 
-                                aliqua. Ut enim ad minim veniam.</p>
-                                <input type="button" class="butt_out" value="Learn More"/>
-                            </div>
-                                
-                    </div>
-                </div>
+                    <div class="signup-form">
+    <form action="/examples/actions/confirmation.php" method="post">
+        <h2>Sign Up</h2>
+        <p>Please fill in this form to create an account!</p>
+        <hr>
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control" name="username" placeholder="Username" required="required">
             </div>
         </div>
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+                <input type="email" class="form-control" name="email" placeholder="Email Address" required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input type="text" class="form-control" name="password" placeholder="Password" required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="fa fa-lock"></i>
+                    <i class="fa fa-check"></i>
+                </span>
+                <input type="text" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+        </div>
+    </form>
+    <div class="text-center">Already have an account? <a href="#">Login here</a></div>
 </div>
       
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
