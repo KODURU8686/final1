@@ -17,6 +17,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-capcapity: cover;
 }
 
 </style>
@@ -27,10 +28,10 @@
 		<h3 class="text-center text-white">Welcome to superuser!: {{user.username}}</h3>
 		{% elif user.role == 1 %}
 		<br>
-		<br><br><h4 class="text-center text-black">Hi {{user.username}} Donor, Here are your Donations... :-)</h4>
-		<h4 class="text-center text-black">view the organizations <a href="{% url 'details' %}">Click here</a></h3>
+		<br><br><h4 class="text-center text-white">Hi {{user.username}} Donor, Here are your Donations... :-)</h4>
+		<h4 class="text-center text-white">view the organizations <a class="  bg-white"href="{% url 'details' %}">Click here</a></h3>
 		{% elif user.role == 2 %}
-		<h3 class="text-center text-black"> <b>  Welcome to {{user.username}} Organiser</b></h3>
+		<h3 class="text-center text-white"> <b>  Welcome to {{user.username}} Organiser</b></h3>
 		{% else %}
 		<h3>Guest</h3>
 		{% endif %}
